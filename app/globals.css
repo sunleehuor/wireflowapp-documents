@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+.prose code:not(pre code) {
+  @apply rounded bg-gray-100 px-1 py-0.5 text-sm text-pink-600;
+}
+
+.dark .prose code:not(pre code) {
+  @apply bg-gray-800 text-pink-400;
+}
