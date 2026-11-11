@@ -1,4 +1,4 @@
-[← Back to Documentation Landing Page](/)
+[← Back to Documentation Landing Page](../README.md)
 
 # `@wireflowapp/react-websocket`
 
@@ -36,7 +36,16 @@ export function LiveTerminal() {
   const [logs, setLogs] = useState<string[]>([]);
   const [command, setCommand] = useState("");
 
-  const { status, send, connect, disconnect, retry } = useWebSocket(
+  const {
+    status,
+    isReconnecting,
+    isReconnectFailed,
+    isReconnected,
+    send,
+    connect,
+    disconnect,
+    retry,
+  } = useWebSocket(
     "wss://echo.websocket.events",
     {
       autoConnect: true,
@@ -59,6 +68,9 @@ export function LiveTerminal() {
   return (
     <div>
       <h3>Status: <span>{status}</span></h3>
+      {isReconnecting && <p>Reconnecting...</p>}
+      {isReconnectFailed && <p style={{ color: "red" }}>Reconnection failed.</p>}
+      {isReconnected && <p style={{ color: "green" }}>Reconnected successfully!</p>}
 
       {/* Manual Connection Controls */}
       <div>
@@ -128,6 +140,9 @@ function useWebSocket(
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | `status` | `ConnectionStatus` (`"Idle"` \| `"Connecting"` \| `"Connected"` \| `"Failed"`) | React state reflecting active connection status. |
+| `isReconnecting` | `boolean` | `true` when reconnect attempts are active following a drop or manual `retry()`. |
+| `isReconnectFailed` | `boolean` | `true` when all reconnect attempts have exhausted and connection reached `"Failed"`. |
+| `isReconnected` | `boolean` | `true` when connection succeeds after a previous disconnect/retry. |
 | `connect` | `() => void` | Initiates connection attempt to the target URL. |
 | `retry` | `() => void` | Manually triggers reconnection attempt. |
 | `disconnect` | `() => void` | Cleanly disconnects the socket and cancels pending retry timers. |
@@ -154,6 +169,6 @@ function useWebSocket(
 
 ## Next Steps
 
-- Check out the runnable interactive example: [`examples/react-websocket`](../../examples/react-websocket)
-- Explore React Socket.IO: [`@wireflowapp/react-socketio`](./react-socketio)
-- Back to [Documentation Index](/)
+- Check out the runnable interactive example: [`examples/react-websocket`](../../examples/react-websocket/README.md)
+- Explore React Socket.IO: [`@wireflowapp/react-socketio`](./react-socketio.md)
+- Back to [Documentation Index](../README.md)

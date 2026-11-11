@@ -1,4 +1,4 @@
-[← Back to Documentation Landing Page](/)
+[← Back to Documentation Landing Page](../README.md)
 
 # `@wireflowapp/vue-websocket`
 
@@ -36,7 +36,16 @@ import { useWebSocket } from "@wireflowapp/vue-websocket";
 const messages = ref<string[]>([]);
 const messageInput = ref("");
 
-const { status, send, connect, disconnect, retry } = useWebSocket(
+const {
+  status,
+  isReconnecting,
+  isReconnectFailed,
+  isReconnected,
+  send,
+  connect,
+  disconnect,
+  retry,
+} = useWebSocket(
   "ws://localhost:8080",
   {
     autoConnect: true,
@@ -63,6 +72,9 @@ function handleSend() {
   <div>
     <h2>Vue WebSocket Example</h2>
     <p>Status: <strong>{{ status }}</strong></p>
+    <p v-if="isReconnecting">Reconnecting to WebSocket...</p>
+    <p v-if="isReconnectFailed" style="color: red;">Reconnection failed.</p>
+    <p v-if="isReconnected" style="color: green;">Reconnected successfully!</p>
 
     <!-- Controls -->
     <div>
@@ -110,6 +122,9 @@ function useWebSocket(
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | `status` | `Ref<ConnectionStatus>` (`"Idle"` \| `"Connecting"` \| `"Connected"` \| `"Failed"`) | Reactive Vue `Ref` representing current connection state. |
+| `isReconnecting` | `Ref<boolean>` | Reactive `Ref<boolean>`: `true` when reconnect attempts are active following a drop or manual `retry()`. |
+| `isReconnectFailed` | `Ref<boolean>` | Reactive `Ref<boolean>`: `true` when all reconnect attempts have exhausted and connection reached `"Failed"`. |
+| `isReconnected` | `Ref<boolean>` | Reactive `Ref<boolean>`: `true` when connection succeeds after a previous disconnect/retry. |
 | `connect` | `() => void` | Initiates connection attempt to the target URL. |
 | `retry` | `() => void` | Manually triggers reconnection attempt. |
 | `disconnect` | `() => void` | Gracefully closes socket and cancels scheduled retry timers. |
@@ -136,6 +151,6 @@ function useWebSocket(
 
 ## Next Steps
 
-- Check out the runnable interactive example: [`examples/vue-websocket`](../../examples/vue-websocket/README)
-- Explore Vue 3 Socket.IO: [`@wireflowapp/vue-socketio`](./vue-socketio)
-- Back to [Documentation Index](/)
+- Check out the runnable interactive example: [`examples/vue-websocket`](../../examples/vue-websocket/README.md)
+- Explore Vue 3 Socket.IO: [`@wireflowapp/vue-socketio`](./vue-socketio.md)
+- Back to [Documentation Index](../README.md)

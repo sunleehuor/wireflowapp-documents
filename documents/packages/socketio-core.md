@@ -1,4 +1,4 @@
-[← Back to Documentation Landing Page](/)
+[← Back to Documentation Landing Page](../README.md)
 
 # `@wireflowapp/socketio-core`
 
@@ -110,6 +110,17 @@ export interface SocketIOOptions extends WireFlowConfig {
 }
 ```
 
+### `ISocketIOClient` Properties
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `status` | `ConnectionStatus` (`"Idle"` \| `"Connecting"` \| `"Connected"` \| `"Failed"`) | Current connection state. |
+| `isReconnecting` | `boolean` | `true` when reconnection attempts are actively running following a drop or manual `retry()`. |
+| `isReconnectFailed` | `boolean` | `true` when retry attempts have exhausted and connection reached `"Failed"`. |
+| `isReconnected` | `boolean` | `true` when connection succeeds after a previous disconnect/retry. |
+| `socket` | `Socket \| null` | Underlying `socket.io-client` Socket instance. |
+| `url` | `string` | Target Socket.IO server URL. |
+
 ### `ISocketIOClient` Methods
 
 | Method | Signature | Description |
@@ -127,6 +138,6 @@ export interface SocketIOOptions extends WireFlowConfig {
 
 ## Next Steps
 
-- Use in React: [`@wireflowapp/react-socketio`](./react-socketio)
-- Use in Vue 3: [`@wireflowapp/vue-socketio`](./vue-socketio)
-- Back to [Documentation Index](/)
+- Use in React: [`@wireflowapp/react-socketio`](./react-socketio.md)
+- Use in Vue 3: [`@wireflowapp/vue-socketio`](./vue-socketio.md)
+- Back to [Documentation Index](../README.md)

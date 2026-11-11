@@ -1,4 +1,4 @@
-[← Back to Documentation Landing Page](/)
+[← Back to Documentation Landing Page](../README.md)
 
 # Wireflow Monorepo Architecture & Design Guide
 

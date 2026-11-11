@@ -1,4 +1,4 @@
-[← Back to Documentation Landing Page](/)
+[← Back to Documentation Landing Page](../README.md)
 
 # `@wireflowapp/react-socketio`
 
@@ -36,7 +36,17 @@ export function RealtimeDashboard() {
   const [alerts, setAlerts] = useState<string[]>([]);
   const [channel, setChannel] = useState("general");
 
-  const { status, emit, on, connect, disconnect, retry } = useSocketIO(
+  const {
+    status,
+    isReconnecting,
+    isReconnectFailed,
+    isReconnected,
+    emit,
+    on,
+    connect,
+    disconnect,
+    retry,
+  } = useSocketIO(
     "http://localhost:3000",
     {
       autoConnect: true,
@@ -64,6 +74,9 @@ export function RealtimeDashboard() {
   return (
     <div>
       <h3>Socket.IO Status: <span>{status}</span></h3>
+      {isReconnecting && <p>Reconnecting to Socket.IO...</p>}
+      {isReconnectFailed && <p style={{ color: "red" }}>Reconnection failed after maximum attempts.</p>}
+      {isReconnected && <p style={{ color: "green" }}>Reconnected successfully!</p>}
 
       {/* Controls */}
       <div>
@@ -109,6 +122,9 @@ function useSocketIO(
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | `status` | `ConnectionStatus` (`"Idle"` \| `"Connecting"` \| `"Connected"` \| `"Failed"`) | React state tracking active connection status. |
+| `isReconnecting` | `boolean` | `true` when reconnect attempts are active following a drop or manual `retry()`. |
+| `isReconnectFailed` | `boolean` | `true` when all reconnect attempts have exhausted and connection reached `"Failed"`. |
+| `isReconnected` | `boolean` | `true` when connection succeeds after a previous disconnect/retry. |
 | `connect` | `() => void` | Initiates connection attempt to the target Socket.IO server. |
 | `retry` | `() => void` | Manually triggers reconnection attempt. |
 | `disconnect` | `() => void` | Disconnects the socket cleanly and cancels pending retries. |
@@ -135,6 +151,6 @@ function useSocketIO(
 
 ## Next Steps
 
-- Check out the runnable interactive example: [`examples/react-socketio`](../../examples/react-socketio/README)
-- Explore Vue 3 Socket.IO: [`@wireflowapp/vue-socketio`](./vue-socketio)
-- Back to [Documentation Index](../README)
+- Check out the runnable interactive example: [`examples/react-socketio`](../../examples/react-socketio/README.md)
+- Explore Vue 3 Socket.IO: [`@wireflowapp/vue-socketio`](./vue-socketio.md)
+- Back to [Documentation Index](../README.md)

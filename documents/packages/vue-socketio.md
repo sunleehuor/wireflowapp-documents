@@ -1,4 +1,4 @@
-[← Back to Documentation Landing Page](/)
+[← Back to Documentation Landing Page](../README.md)
 
 # `@wireflowapp/vue-socketio`
 
@@ -36,7 +36,17 @@ import { useSocketIO } from "@wireflowapp/vue-socketio";
 const chatMessages = ref<string[]>([]);
 const messageInput = ref("");
 
-const { status, emit, on, connect, disconnect, retry } = useSocketIO(
+const {
+  status,
+  isReconnecting,
+  isReconnectFailed,
+  isReconnected,
+  emit,
+  on,
+  connect,
+  disconnect,
+  retry,
+} = useSocketIO(
   "http://localhost:3000",
   {
     autoConnect: true,
@@ -69,6 +79,9 @@ function handleSend() {
   <div>
     <h2>Vue Socket.IO Example</h2>
     <p>Status: <strong>{{ status }}</strong></p>
+    <p v-if="isReconnecting">Reconnecting to Socket.IO...</p>
+    <p v-if="isReconnectFailed" style="color: red;">Reconnection failed.</p>
+    <p v-if="isReconnected" style="color: green;">Reconnected successfully!</p>
 
     <!-- Controls -->
     <div>
@@ -116,6 +129,9 @@ function useSocketIO(
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | `status` | `Ref<ConnectionStatus>` (`"Idle"` \| `"Connecting"` \| `"Connected"` \| `"Failed"`) | Reactive Vue `Ref` representing current connection state. |
+| `isReconnecting` | `Ref<boolean>` | Reactive `Ref<boolean>`: `true` when reconnect attempts are active following a drop or manual `retry()`. |
+| `isReconnectFailed` | `Ref<boolean>` | Reactive `Ref<boolean>`: `true` when all reconnect attempts have exhausted and connection reached `"Failed"`. |
+| `isReconnected` | `Ref<boolean>` | Reactive `Ref<boolean>`: `true` when connection succeeds after a previous disconnect/retry. |
 | `connect` | `() => void` | Initiates connection attempt to the target Socket.IO server. |
 | `retry` | `() => void` | Manually triggers reconnection attempt. |
 | `disconnect` | `() => void` | Cleanly disconnects the socket and cancels pending retries. |
@@ -142,6 +158,6 @@ function useSocketIO(
 
 ## Next Steps
 
-- Check out the runnable interactive example: [`examples/vue-socketio`](../../examples/vue-socketio/README)
-- Explore Core Architecture: [Architecture Overview](../guides/architecture)
-- Back to [Documentation Index](/)
+- Check out the runnable interactive example: [`examples/vue-socketio`](../../examples/vue-socketio/README.md)
+- Explore Core Architecture: [Architecture Overview](../guides/architecture.md)
+- Back to [Documentation Index](../README.md)

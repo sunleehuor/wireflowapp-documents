@@ -1,4 +1,4 @@
-[← Back to Documentation Landing Page](/)
+[← Back to Documentation Landing Page](../README.md)
 
 # `@wireflowapp/core`
 
@@ -149,6 +149,9 @@ export interface WireFlowConfig {
 ```ts
 export interface ConnectionResult {
   readonly status: ConnectionStatus;
+  readonly isReconnecting?: boolean;
+  readonly isReconnectFailed?: boolean;
+  readonly isReconnected?: boolean;
   connect: () => void;
   retry: () => void;
   disconnect: () => void;
@@ -159,6 +162,6 @@ export interface ConnectionResult {
 
 ## Next Steps
 
-- Explore the Native WebSocket Engine: [`@wireflowapp/websocket-core`](./websocket-core)
-- Explore the Socket.IO Engine: [`@wireflowapp/socketio-core`](./socketio-core)
-- Back to [Documentation Index](/)
+- Explore the Native WebSocket Engine: [`@wireflowapp/websocket-core`](./websocket-core.md)
+- Explore the Socket.IO Engine: [`@wireflowapp/socketio-core`](./socketio-core.md)
+- Back to [Documentation Index](../README.md)
