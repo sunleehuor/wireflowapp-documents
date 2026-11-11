@@ -1,4 +1,4 @@
-[← Back to Documentation Landing Page](../README.md)
+[← Back to Documentation Landing Page](/)
 
 # `@wireflowapp/vue-socketio`
 
@@ -158,6 +158,6 @@ function useSocketIO(
 
 ## Next Steps
 
-- Check out the runnable interactive example: [`examples/vue-socketio`](../../examples/vue-socketio/README.md)
-- Explore Core Architecture: [Architecture Overview](../guides/architecture.md)
-- Back to [Documentation Index](../README.md)
+- Check out the runnable interactive example: [`examples/vue-socketio`](../../examples/vue-socketio/README)
+- Explore Core Architecture: [Architecture Overview](../guides/architecture)
+- Back to [Documentation Index](/)

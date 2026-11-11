@@ -1,4 +1,4 @@
-[← Back to Documentation Landing Page](../README.md)
+[← Back to Documentation Landing Page](/)
 
 # `@wireflowapp/core`
 
@@ -162,6 +162,6 @@ export interface ConnectionResult {
 
 ## Next Steps
 
-- Explore the Native WebSocket Engine: [`@wireflowapp/websocket-core`](./websocket-core.md)
-- Explore the Socket.IO Engine: [`@wireflowapp/socketio-core`](./socketio-core.md)
-- Back to [Documentation Index](../README.md)
+- Explore the Native WebSocket Engine: [`@wireflowapp/websocket-core`](./websocket-core)
+- Explore the Socket.IO Engine: [`@wireflowapp/socketio-core`](./socketio-core)
+- Back to [Documentation Index](/)

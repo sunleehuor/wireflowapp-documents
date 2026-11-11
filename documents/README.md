@@ -27,18 +27,18 @@ Explore detailed documentation, API surfaces, and usage guides for each package:
 
 | Package | Framework | Transport | Documentation |
 | :--- | :--- | :--- | :--- |
-| **[`@wireflowapp/react-websocket`](./packages/react-websocket.md)** | React 18 & 19 | Native WebSocket | [View React WebSocket Guide](./packages/react-websocket.md) ↗ |
-| **[`@wireflowapp/react-socketio`](./packages/react-socketio.md)** | React 18 & 19 | Socket.IO | [View React Socket.IO Guide](./packages/react-socketio.md) ↗ |
-| **[`@wireflowapp/vue-websocket`](./packages/vue-websocket.md)** | Vue 3 | Native WebSocket | [View Vue WebSocket Guide](./packages/vue-websocket.md) ↗ |
-| **[`@wireflowapp/vue-socketio`](./packages/vue-socketio.md)** | Vue 3 | Socket.IO | [View Vue Socket.IO Guide](./packages/vue-socketio.md) ↗ |
+| **[`@wireflowapp/react-websocket`](./packages/react-websocket)** | React 18 & 19 | Native WebSocket | [View React WebSocket Guide](./packages/react-websocket) ↗ |
+| **[`@wireflowapp/react-socketio`](./packages/react-socketio)** | React 18 & 19 | Socket.IO | [View React Socket.IO Guide](./packages/react-socketio) ↗ |
+| **[`@wireflowapp/vue-websocket`](./packages/vue-websocket)** | Vue 3 | Native WebSocket | [View Vue WebSocket Guide](./packages/vue-websocket) ↗ |
+| **[`@wireflowapp/vue-socketio`](./packages/vue-socketio)** | Vue 3 | Socket.IO | [View Vue Socket.IO Guide](./packages/vue-socketio) ↗ |
 
 ### ⚙️ Core Engines (Framework-Agnostic)
 
 | Package | Description | Documentation |
 | :--- | :--- | :--- |
-| **[`@wireflowapp/core`](./packages/core.md)** | Core lifecycle types, `RetryManager`, and global `WireFlowManager` | [View Core Guide](./packages/core.md) ↗ |
-| **[`@wireflowapp/websocket-core`](./packages/websocket-core.md)** | Standalone native WebSocket client engine and instance manager | [View WebSocket Core Guide](./packages/websocket-core.md) ↗ |
-| **[`@wireflowapp/socketio-core`](./packages/socketio-core.md)** | Standalone Socket.IO client wrapper and instance manager | [View Socket.IO Core Guide](./packages/socketio-core.md) ↗ |
+| **[`@wireflowapp/core`](./packages/core)** | Core lifecycle types, `RetryManager`, and global `WireFlowManager` | [View Core Guide](./packages/core) ↗ |
+| **[`@wireflowapp/websocket-core`](./packages/websocket-core)** | Standalone native WebSocket client engine and instance manager | [View WebSocket Core Guide](./packages/websocket-core) ↗ |
+| **[`@wireflowapp/socketio-core`](./packages/socketio-core)** | Standalone Socket.IO client wrapper and instance manager | [View Socket.IO Core Guide](./packages/socketio-core) ↗ |
 
 ---
 
@@ -69,7 +69,7 @@ Wireflow uses a clean three-tiered layered architecture:
 └──────────────────┘└──────────────────┘    └──────────────────┘└──────────────────┘
 ```
 
-Read the full architectural guide: [Monorepo Architecture & Design Guide](./guides/architecture.md).
+Read the full architectural guide: [Monorepo Architecture & Design Guide](./guides/architecture).
 
 ---
 
@@ -126,7 +126,7 @@ In addition to the primary `status`, all React and Vue adapters expose granular 
 
 Try out full working implementations of all 4 adapters connected to a live dual-protocol mock server:
 
-- **[Interactive Examples Guide](./guides/examples.md)**
+- **[Interactive Examples Guide](./guides/examples)**
   - Native WebSocket server on `ws://localhost:8080`
   - Socket.IO server on `http://localhost:3000`
   - React & Vue runnable Vite projects

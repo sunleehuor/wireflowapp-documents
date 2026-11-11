@@ -1,4 +1,4 @@
-[← Back to Documentation Landing Page](../README.md)
+[← Back to Documentation Landing Page](/)
 
 # `@wireflowapp/vue-websocket`
 
@@ -151,6 +151,6 @@ function useWebSocket(
 
 ## Next Steps
 
-- Check out the runnable interactive example: [`examples/vue-websocket`](../../examples/vue-websocket/README.md)
-- Explore Vue 3 Socket.IO: [`@wireflowapp/vue-socketio`](./vue-socketio.md)
-- Back to [Documentation Index](../README.md)
+- Check out the runnable interactive example: [`examples/vue-websocket`](../../examples/vue-websocket/README)
+- Explore Vue 3 Socket.IO: [`@wireflowapp/vue-socketio`](./vue-socketio)
+- Back to [Documentation Index](/)

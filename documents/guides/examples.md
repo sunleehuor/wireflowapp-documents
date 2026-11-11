@@ -1,4 +1,4 @@
-[← Back to Documentation Landing Page](../README.md)
+[← Back to Documentation Landing Page](/)
 
 # Wireflow Interactive Examples Guide
 
@@ -10,10 +10,10 @@ Wireflow includes 4 fully functional interactive example applications built with
 
 | Directory | Framework | Transport | Documentation |
 | :--- | :--- | :--- | :--- |
-| [`examples/react-websocket`](../../examples/react-websocket) | React 18 | Native WebSocket | [React WebSocket Guide](../../examples/react-websocket/README.md) |
-| [`examples/react-socketio`](../../examples/react-socketio) | React 18 | Socket.IO | [React Socket.IO Guide](../../examples/react-socketio/README.md) |
-| [`examples/vue-websocket`](../../examples/vue-websocket) | Vue 3 | Native WebSocket | [Vue WebSocket Guide](../../examples/vue-websocket/README.md) |
-| [`examples/vue-socketio`](../../examples/vue-socketio) | Vue 3 | Socket.IO | [Vue Socket.IO Guide](../../examples/vue-socketio/README.md) |
+| [`examples/react-websocket`](../../examples/react-websocket) | React 18 | Native WebSocket | [React WebSocket Guide](../../examples/react-websocket/README) |
+| [`examples/react-socketio`](../../examples/react-socketio) | React 18 | Socket.IO | [React Socket.IO Guide](../../examples/react-socketio/README) |
+| [`examples/vue-websocket`](../../examples/vue-websocket) | Vue 3 | Native WebSocket | [Vue WebSocket Guide](../../examples/vue-websocket/README) |
+| [`examples/vue-socketio`](../../examples/vue-socketio) | Vue 3 | Socket.IO | [Vue Socket.IO Guide](../../examples/vue-socketio/README) |
 
 ---
 

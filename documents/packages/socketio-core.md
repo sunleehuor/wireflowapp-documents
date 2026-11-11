@@ -1,4 +1,4 @@
-[← Back to Documentation Landing Page](../README.md)
+[← Back to Documentation Landing Page](/)
 
 # `@wireflowapp/socketio-core`
 
@@ -138,6 +138,6 @@ export interface SocketIOOptions extends WireFlowConfig {
 
 ## Next Steps
 
-- Use in React: [`@wireflowapp/react-socketio`](./react-socketio.md)
-- Use in Vue 3: [`@wireflowapp/vue-socketio`](./vue-socketio.md)
-- Back to [Documentation Index](../README.md)
+- Use in React: [`@wireflowapp/react-socketio`](./react-socketio)
+- Use in Vue 3: [`@wireflowapp/vue-socketio`](./vue-socketio)
+- Back to [Documentation Index](/)

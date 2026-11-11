@@ -1,4 +1,4 @@
-[← Back to Documentation Landing Page](../README.md)
+[← Back to Documentation Landing Page](/)
 
 # `@wireflowapp/react-websocket`
 
@@ -169,6 +169,6 @@ function useWebSocket(
 
 ## Next Steps
 
-- Check out the runnable interactive example: [`examples/react-websocket`](../../examples/react-websocket/README.md)
-- Explore React Socket.IO: [`@wireflowapp/react-socketio`](./react-socketio.md)
-- Back to [Documentation Index](../README.md)
+- Check out the runnable interactive example: [`examples/react-websocket`](../../examples/react-websocket/README)
+- Explore React Socket.IO: [`@wireflowapp/react-socketio`](./react-socketio)
+- Back to [Documentation Index](/)

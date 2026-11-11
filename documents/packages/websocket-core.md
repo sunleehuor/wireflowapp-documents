@@ -1,4 +1,4 @@
-[← Back to Documentation Landing Page](../README.md)
+[← Back to Documentation Landing Page](/)
 
 # `@wireflowapp/websocket-core`
 
@@ -7,7 +7,7 @@
 [![npm version](https://img.shields.io/npm/v/@wireflowapp/websocket-core.svg)](https://www.npmjs.com/package/@wireflowapp/websocket-core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](../../LICENSE)
 
-`@wireflowapp/websocket-core` provides high-performance, resilient native WebSocket management without any dependency on React or Vue. It directly powers [`@wireflowapp/react-websocket`](./react-websocket.md) and [`@wireflowapp/vue-websocket`](./vue-websocket.md), and can be used directly in vanilla TypeScript, Node.js, and other frameworks.
+`@wireflowapp/websocket-core` provides high-performance, resilient native WebSocket management without any dependency on React or Vue. It directly powers [`@wireflowapp/react-websocket`](./react-websocket) and [`@wireflowapp/vue-websocket`](./vue-websocket), and can be used directly in vanilla TypeScript, Node.js, and other frameworks.
 
 ---
 
@@ -143,6 +143,6 @@ export interface WebSocketOptions extends WireFlowConfig {
 
 ## Next Steps
 
-- Use in React: [`@wireflowapp/react-websocket`](./react-websocket.md)
-- Use in Vue 3: [`@wireflowapp/vue-websocket`](./vue-websocket.md)
-- Back to [Documentation Index](../README.md)
+- Use in React: [`@wireflowapp/react-websocket`](./react-websocket)
+- Use in Vue 3: [`@wireflowapp/vue-websocket`](./vue-websocket)
+- Back to [Documentation Index](/)
